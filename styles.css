@@ -15,6 +15,72 @@
 
 /* Ayush Part Start */
 
+.footer-cta {
+    padding: 20px;
+    background-color : 
+    #ffda79 ;
+    text-align: center;
+}
+
+.footer-cta__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-cta__heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-cta__copy {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-cta__actions {
+    margin-bottom: 20px;
+}
+
+.btn2 {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 5px;
+    background-color: white;
+    color: black;
+    border-radius: 10%;
+}
+
+.btn2--large {
+    font-size: 18px;
+}
+
+.btn1 {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+}
+
+.btn1--large {
+    font-size: 18px;
+}
+
+.btn2--secondary-alt {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.btn2--large:hover, .btn2--secondary-alt:hover {
+    background-color: #e0e0e0;
+}
+
 /* Ayush Part End */
 
 
