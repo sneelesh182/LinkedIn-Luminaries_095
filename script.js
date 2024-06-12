@@ -1,5 +1,41 @@
 // Avani Part Start
 
+document.addEventListener('DOMContentLoaded', function() {
+    const loginButton = document.getElementById('login');
+    const signupButton = document.getElementById('signup');
+    const getStartedButton = document.getElementById('get-started');
+
+    loginButton.addEventListener('click', function() {
+        alert('Login button clicked');
+    });
+
+    signupButton.addEventListener('click', function() {
+        alert('Signup button clicked');
+    });
+
+    getStartedButton.addEventListener('click', function() {
+        alert('Get Started button clicked');
+    });
+
+    const navItems = document.querySelectorAll('nav ul li a');
+    navItems.forEach(item => {
+        item.addEventListener('mouseover', function() {
+            this.style.color = '#000';
+        });
+        item.addEventListener('mouseout', function() {
+            this.style.color = '#333';
+        });
+    });
+
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('focus', function() {
+        this.style.borderColor = '#000';
+    });
+    searchInput.addEventListener('blur', function() {
+        this.style.borderColor = '#ccc';
+    });
+});
+
 // Avani Part End
 
 
