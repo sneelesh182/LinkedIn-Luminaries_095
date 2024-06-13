@@ -49,7 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
 // Neelesh Part Start
 let ncontainer=document.querySelector("#ncontainer")
 let ncontainer1=document.querySelector("#ncontainer1")
+let browse=document.querySelector("#browse")
 let move=document.querySelector("#move")
+browse.addEventListener("click",handleBrowse)
+function handleBrowse(){
+    window.location.href="browse.html"
+}
 async function ngetData(){
     try{
         let res=await fetch('http://localhost:3000/inspiring_designs')
@@ -95,10 +100,9 @@ async function ngetData(){
                 status=document.createElement('p')
                 status.textContent="PRO"
             }
-
+            status.classList.add('stats')
             let heart=document.createElement('i')
             heart.classList.add('fa-solid','fa-heart')
-            heart.style.color="#e3e3e3"
             let eye=document.createElement('i')
             eye.classList.add("fa-regular","fa-eye")
             eye.style.color="#727274"
@@ -157,6 +161,8 @@ async function ngetData(){
         move.innerHTML += clonedCards
     }
     ngetData1()
+
+    
 // Neelesh Part End
 
 
