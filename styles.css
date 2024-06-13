@@ -113,14 +113,71 @@ p {
 /* margin: 0px; */
 /* padding: 0px; */
 /* } */
-
+#ncontainer {
+  width: 1600px;
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding-bottom: 72px;
+}
+#move {
+  display: flex;
+  width: calc(200px * 30);
+  gap: 15px;
+  animation: a1 12s linear infinite;
+}
+#move > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 8px;
+  box-sizing: border-box;
+  padding: 16px 20px;
+}
+#move > div > div > p {
+  margin: 0px;
+  color: white;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: Helvetica, Arial, sans-serif;
+  border: 1px solid;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 9999999px;
+}
+#move > div > div {
+  display: flex;
+  gap: 8px;
+  box-sizing: border-box;
+  /* border: 1px solid; */
+}
+#move > div > p {
+  margin: 0;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: Helvetica, Arial, sans-serif;
+}
+#explore {
+  font-size: 48px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 48px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0px;
+}
 #ncontainer1 {
-  width: 1300px;
+  max-width: 1300px;
+  width: 100%;
   display: grid;
   margin: auto;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   box-sizing: border-box;
+  margin-bottom: 48px;
   /* padding-inline: 25px 25px; */
 }
 #ncontainer1 > div > div > div {
@@ -176,6 +233,11 @@ p {
 #ncontainer1 > div > div {
   display: flex;
   justify-content: space-between;
+}
+@keyframes a1 {
+  100% {
+    transform: translateX(-300px);
+  }
 }
 @media (max-width: 360px) {
   #ncontainer1 {
@@ -242,7 +304,7 @@ p {
 @media (min-width: 513px) and (max-width: 1024px) {
   #ncontainer1 {
     width: 1200px;
-    /* margin: auto; */
+    margin: auto;
     grid-template-columns: repeat(3, 1fr);
   }
   #ncontainer1 > div > div > div > img {
@@ -267,14 +329,6 @@ p {
   }
   #ncontainer1 > div > div > div:nth-of-type(2) > p:nth-of-type(2) {
     font-size: 18px;
-  }
-  @media (min-width:1025px) and (max-width:1299px)
-  {
-    #ncontainer1{
-        width: 1200px;
-    margin: auto;
-    grid-template-columns: repeat(4, 1fr);
-    }
   }
 }
 /* Neelesh Part End */

@@ -47,8 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Neelesh Part Start
+let ncontainer=document.querySelector("#ncontainer")
 let ncontainer1=document.querySelector("#ncontainer1")
-
+let move=document.querySelector("#move")
 async function ngetData(){
     try{
         let res=await fetch('http://localhost:3000/inspiring_designs')
@@ -112,6 +113,50 @@ async function ngetData(){
         })
     }
     ngetData()
+    async function ngetData1(){
+        try{
+            let res=await fetch(`http://localhost:3000/moving-cards`)
+            if(res.ok){
+                let data=await res.json()
+                nshowData1(data)
+            }
+        }catch(error){
+            console.log(error)
+        }
+    }   
+    function nshowData1(data){
+        ncontainer.innerHTML=""
+        
+        data.forEach((ele)=>{
+            let card=document.createElement('div')
+            card.style.backgroundImage=`url(${ele.img})`
+            card.style.width="273px"
+            card.style.height="339px"
+            card.style.borderRadius="12px"
+            card.style.backgroundSize="cover"
+            card.style.objectFit="contain"
+            card.style.backgroundRepeat="norepeat"
+            card.style.backgroundPosition="center"
+            let name=document.createElement('p')
+            name.textContent=ele.name
+            let designation=document.createElement('p')
+            designation.textContent=ele.designation
+            let tagContainer=document.createElement('div')
+            ele.tag.forEach((tags)=>{
+                let tag=document.createElement('p')
+                tag.textContent=tags
+                // tag.style.border="1px solid"
+                tagContainer.append(tag)
+            })
+            card.append(name,designation,tagContainer)
+            
+            move.append(card)
+            ncontainer.append(move)
+        })
+        let clonedCards = move.innerHTML
+        move.innerHTML += clonedCards
+    }
+    ngetData1()
 // Neelesh Part End
 
 
