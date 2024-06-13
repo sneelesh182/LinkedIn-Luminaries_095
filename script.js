@@ -101,6 +101,8 @@ async function ngetData(){
             let eye=document.createElement('i')
             eye.classList.add("fa-regular","fa-eye")
             eye.style.color="#727274"
+            eye.style.fontSize="24px"
+            heart.style.fontSize="24px"
             card3.append(heart,like,eye,watch)
             card2.append(icon,name,status)
             card.append(card2,card3)
