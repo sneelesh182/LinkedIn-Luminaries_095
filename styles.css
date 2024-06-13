@@ -1,32 +1,47 @@
 /* Avani Part Start */
+@keyframes colorChange {
+  0% { background-color: #e0baff; }
+  25% { background-color: #c9d6f3; }
+  50% { background-color: #a7deb6; }
+  75% { background-color: #dfe8b1; }
+  90% { background-color: #eabb91; }
+}
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
+  background-color: #f8f7f4;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   /* height: 100vh; */
-  background-color: #f8f7f4;
 }
 
-nav {
-  max-width: 1200px;
-  /* margin: auto; */
+#navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+#navbar {
+  max-width: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
   margin-top: 20px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   padding: 0;
   margin: 0;
 }
@@ -36,9 +51,10 @@ nav ul li {
 }
 
 nav ul li a {
+  
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: #333333;
+  font-weight:600;
 }
 
 .nav-right {
@@ -47,10 +63,23 @@ nav ul li a {
   gap: 20px;
 }
 
-#search {
-  padding: 10px;
+.search-container {
+  position: relative;
+}
+
+.search-container input {
+  padding: 15px 25px 15px 40px;
   border-radius: 20px;
-  border: 1px solid #ffffff;
+  border: 1px solid #f8f7f4;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
 }
 
 button {
@@ -66,40 +95,64 @@ button {
 }
 
 #signup {
-  background-color: #000;
+  background-color: #0d0c22;
   color: #fff;
+}
+
+#signup:hover {
+  background-color:#505058; 
+}
+
+#content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
 }
 
 #content {
   text-align: center;
-  padding: 50px;
+  padding: 30px;
 }
 
 .badge {
   background-color: #e0baff;
-  color: #5e2a76;
+  color: #000000;
   padding: 10px 20px;
   border-radius: 20px;
   display: inline-block;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-family: "Source Serif 4", serif;
+  font-style: normal;
+  animation: colorChange 16s infinite;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   margin: 0;
   margin-bottom: 20px;
+  font-family: "Source Serif 4", serif;
+  font-weight:500;
+  font-style: normal;
 }
 
 p {
-  font-size: 1.2em;
-  color: #666;
+  font-size: 1em;
+  color: #000000;
   margin-bottom: 30px;
+  font-weight:500;
 }
 
 #get-started {
-  background-color: #000;
+  background-color:#0d0c22;
   color: #fff;
+  font-weight: 500;
+  padding: 15px 20px;
+  border-radius: 25px;
+}
+#get-started:hover {
+  background-color:#505058; 
 }
 
 /* Avani Part End */
