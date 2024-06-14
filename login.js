@@ -15,19 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px;
+            // padding: 40px;
         }
 
         .ava-contain-left {
             background-color: #000000;
             color: #ffffff;
-            width: 30%;
+            width: 26%;
             text-align: center;
+        
         }
 
         .ava-contain-right {
             background-color: #ffffff;
-            width: 70%;
+            width: 45%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -35,35 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
             text-align: center;
         }
 
-        .text-content {
-            margin-bottom: 20px;
-        }
-
-        .text-content h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        .text-content p {
-            font-size: 1.1em;
-            margin-bottom: 40px;
-        }
-
-        .start-building {
-            background-color: #007bff;
-            color: #ffffff;
-            padding: 15px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-
-        .promo-image {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
+        .background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .login-content {
