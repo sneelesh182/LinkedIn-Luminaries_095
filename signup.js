@@ -12,23 +12,40 @@ document.addEventListener('DOMContentLoaded', function() {
             display: flex;
             height: 100%;
         }
+        .ava-contain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+        }
         #left-panel {
-            width: 25%;
+            width: 26%;
             background-color: #000;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            overflow: hidden;
         }
         #right-panel {
-            width: 60%;
-            background-color: #fafafa;
+            width: 40%;
+            background-color:white;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        #webflow img {
-            max-width: 100%;
-            height: auto;
+        #webflow {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         #signup-box {
             text-align: center;
@@ -58,11 +75,11 @@ document.addEventListener('DOMContentLoaded', function() {
             width: 100%;
             margin-bottom: 15px;
             cursor: pointer;
-            font-weight:400;
+            font-weight: 400;
         }
             
         #google-signup {
-            color:white;
+            color: white;
             background-color: #1a1a1a;
         }
         #or-divider {
@@ -92,4 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('email-signup').addEventListener('click', function() {
         alert('Continue with email clicked');
     });
+
+   
 });
