@@ -271,5 +271,28 @@ async function ngetData(){
 
 
 // Kranti Part Start
+    const twitter = document.querySelector(".fa-twitter")
+    twitter.addEventListener("click", function (){
+        window.location = "https://x.com/dribbble"
+    })
 
+    const facebook = document.querySelector(".fa-square-facebook")
+    facebook.addEventListener("click", function (){
+        window.location = "https://www.facebook.com/dribbble"
+    })
+
+    const instragram = document.querySelector(".fa-instagram")
+    instragram.addEventListener("click", function (){
+        window.location = "https://www.instagram.com/dribbble/"
+    })
+
+    const pinterest = document.querySelector(".fa-pinterest")
+    pinterest.addEventListener("click", function (){
+        window.location = "https://www.pinterest.com/dribbble/"
+    })
+
+    const supportPage = document.querySelector("#ksupportpage")
+    supportPage.addEventListener("click", function (){
+        window.location = "support.html"
+    })
 // Kranti Part End
