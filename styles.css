@@ -387,7 +387,11 @@ p {
 /* Neelesh Part End */
 
 /* Ayush Part Start */
-
+.footer-cta-container{
+  max-width: 1600px;
+  width: 100%;
+  background-color: #ffda79;
+}
 .footer-cta {
   padding: 20px;
   background-color: #ffda79;
