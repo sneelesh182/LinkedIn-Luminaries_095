@@ -1,11 +1,12 @@
 let selectTag = document.querySelector("#selectTag");
 let ncontainer2 = document.querySelector("#ncontainer2");
-
+let go=document.querySelector("#go")
+let data=[]
 async function ngetData2() {
     try {
         let res = await fetch('http://localhost:3000/explore_designs');
         if (res.ok) {
-            let data = await res.json();
+             data = await res.json();
             return data;
         }
     } catch (error) {
@@ -13,9 +14,9 @@ async function ngetData2() {
     }
 }
 
-function nshowData2(data) {
+function nshowData2(data2) {
     ncontainer2.innerHTML = "";
-    data.forEach((ele) => {
+    data2.forEach((ele) => {
         let card1 = document.createElement('div');
         let card2 = document.createElement('div');
         let card3 = document.createElement('div');
@@ -64,7 +65,7 @@ selectTag.addEventListener("change", handleSelect);
 
 async function handleSelect() {
     let value = selectTag.value;
-    let data = await ngetData2();
+     data = await ngetData2();
 
     if (value === "name") {
         data.sort((a, b) => a.name.localeCompare(b.name));
@@ -76,8 +77,28 @@ async function handleSelect() {
 
     nshowData2(data);
 }
-
+go.addEventListener("input",handleSearch)
+let timeout;
+async function handleSearch(){
+    let value=go.value.toLowerCase()
+    clearTimeout(timeout)
+    if(value.length===0)
+    {
+        nshowData2(data)
+        return
+    }
+    if(value.length<=4){
+        return false
+    }
+    
+    timeout=setTimeout(()=>{
+        let narr=data.filter((ele)=>{
+            return ele.name.toLowerCase().includes(value)
+        })
+        nshowData2(narr)
+    },2000)
+}
 (async function init() {
-    let data = await ngetData2();
+     data = await ngetData2();
     nshowData2(data);
 })();

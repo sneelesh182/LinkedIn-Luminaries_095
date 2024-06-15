@@ -168,15 +168,24 @@ p {
 /* } */
 #selectTag{
     box-sizing: border-box;
-    padding: 15px;
-    border-radius: 200px;
+    padding: 8px;
+    border-radius: 10px;
     font-family: Helvetica, Arial,sans-serif;
+}
+#go{
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 10px;
+  font-family: Helvetica, Arial,sans-serif;
 }
 #selectContainer{
     max-width: 1300px;
     width: 100%;
     margin: auto;
     margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #btn_redirect{
     display:grid;
