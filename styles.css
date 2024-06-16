@@ -196,6 +196,10 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+}
+#modal-content{
+  font-family: Helvetica, Arial ,sans-serif;
 }
 
 .close {
@@ -204,7 +208,11 @@ p {
   font-size: 28px;
   font-weight: bold;
 }
-
+.contact-btn{
+  background-color: black;
+  color: white;
+  margin-bottom: 5px;
+}
 .close:hover,
 .close:focus {
   color: black;
