@@ -106,13 +106,31 @@ function showModal(cardData) {
     const modal = document.getElementById('modal');
     const modalContent = document.getElementById('modal-content');
     const closeBtn = document.querySelector('.close');
-
+    let availabilityText;
+    let availabilityIcon;
+   
+    if (cardData.id % 3 === 0) {
+        availabilityText = "Available to work";
+        availabilityIcon = '<i class="fa-solid fa-circle" style="color: green; margin-left: 10px;"></i>';
+    } else {
+        availabilityText = "Not available";
+        availabilityIcon = '<i class="fa-solid fa-circle" style="color: red; margin-left: 10px;"></i>';
+    }
     modalContent.innerHTML = `
         <h2>${cardData.name}</h2>
-        <p>Likes: ${cardData.like_count}</p>
-        <p>Watchers: ${cardData.watch_count}</p>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center;">
+                <p style="margin: 0;">${availabilityText}${availabilityIcon}</p>
+            </div>
+            <button class="contact-btn">Get in touch</button>
+        </div>
         <img src="${cardData.img}" alt="${cardData.name}">
     `;
+    const contactButton = modalContent.querySelector('.contact-btn');
+    contactButton.addEventListener('click', function() {
+
+        window.location.href="signup.html"
+    });
 
     modal.style.display = 'block';
     
