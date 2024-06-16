@@ -57,6 +57,10 @@ function nshowData2(data2) {
         card2.append(icon, name, status);
         card.append(card2, card3);
         cards.append(card1, card);
+        
+cards.addEventListener('click', () => {
+    showModal(ele);
+});
         ncontainer2.append(cards);
     });
 }
@@ -98,6 +102,31 @@ async function handleSearch(){
         nshowData2(narr)
     },2000)
 }
+function showModal(cardData) {
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modal-content');
+    const closeBtn = document.querySelector('.close');
+
+    modalContent.innerHTML = `
+        <h2>${cardData.name}</h2>
+        <p>Likes: ${cardData.like_count}</p>
+        <p>Watchers: ${cardData.watch_count}</p>
+        <img src="${cardData.img}" alt="${cardData.name}">
+    `;
+
+    modal.style.display = 'block';
+    
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+}
+
 (async function init() {
      data = await ngetData2();
     nshowData2(data);
