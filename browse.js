@@ -134,73 +134,73 @@ function showModal(cardData) {
 
 
 // avani 
-document.addEventListener('DOMContentLoaded', function() {
-    const loginButton = document.getElementById('login');
-    const signupButton = document.getElementById('signup');
-    const getStartedButton = document.getElementById('get-started');
-    const searchInput = document.getElementById('search');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const loginButton = document.getElementById('login');
+//     const signupButton = document.getElementById('signup');
+//     const getStartedButton = document.getElementById('get-started');
+//     const searchInput = document.getElementById('search');
 
-    loginButton.addEventListener('click', function() {
-        window.location.href = 'login.html'; // to login page
-    });
+//     loginButton.addEventListener('click', function() {
+//         window.location.href = 'login.html'; // to login page
+//     });
 
-    signupButton.addEventListener('click', function() {
-        window.location.href = 'signup.html'; // to signup page
-    });
+//     signupButton.addEventListener('click', function() {
+//         window.location.href = 'signup.html'; // to signup page
+//     });
 
 
-    getStartedButton.addEventListener('click', function() {
-        window.location.href = 'signup.html'; // to signup page
-    });
+//     getStartedButton.addEventListener('click', function() {
+//         window.location.href = 'signup.html'; // to signup page
+//     });
 
-    const navItems = document.querySelectorAll('nav ul li a');
-    navItems.forEach(item => {
-        item.addEventListener('mouseover', function() {
-            this.style.color = '#000';
-        });
-        item.addEventListener('mouseout', function() {
-            this.style.color = '#333';
-        });
-    });
+//     const navItems = document.querySelectorAll('nav ul li a');
+//     navItems.forEach(item => {
+//         item.addEventListener('mouseover', function() {
+//             this.style.color = '#000';
+//         });
+//         item.addEventListener('mouseout', function() {
+//             this.style.color = '#333';
+//         });
+//     });
 
-    searchInput.addEventListener('focus', function() {
-        this.style.borderColor = '#000';
-    });
-    searchInput.addEventListener('blur', function() {
-        this.style.borderColor = '#ccc';
-    });
+//     searchInput.addEventListener('focus', function() {
+//         this.style.borderColor = '#000';
+//     });
+//     searchInput.addEventListener('blur', function() {
+//         this.style.borderColor = '#ccc';
+//     });
 
-    searchInput.addEventListener('input', function() {
-        const query = this.value.toLowerCase();
-        filterDesigns(query);
-    });
+//     searchInput.addEventListener('input', function() {
+//         const query = this.value.toLowerCase();
+//         filterDesigns(query);
+//     });
 
-    function filterDesigns(query) {
+//     function filterDesigns(query) {
 
         // add data
         
-        const designs = [
-            { title: 'Blue Ocean', designer: 'Alex Krugli', tags: ['blue', 'ocean', 'water'] },
-            { title: 'Sunset', designer: 'Jane Doe', tags: ['orange', 'sunset', 'sky'] },
-            { title: 'Forest', designer: 'John Smith', tags: ['green', 'trees', 'nature'] },
-            { title: 'Blue Sky', designer: 'Alex Krugli', tags: ['blue', 'sky', 'clouds'] },
-        ];
+//         const designs = [
+//             { title: 'Blue Ocean', designer: 'Alex Krugli', tags: ['blue', 'ocean', 'water'] },
+//             { title: 'Sunset', designer: 'Jane Doe', tags: ['orange', 'sunset', 'sky'] },
+//             { title: 'Forest', designer: 'John Smith', tags: ['green', 'trees', 'nature'] },
+//             { title: 'Blue Sky', designer: 'Alex Krugli', tags: ['blue', 'sky', 'clouds'] },
+//         ];
 
-        const filteredDesigns = designs.filter(design => {
-            return design.tags.includes(query) || design.designer.toLowerCase().includes(query);
-        });
+//         const filteredDesigns = designs.filter(design => {
+//             return design.tags.includes(query) || design.designer.toLowerCase().includes(query);
+//         });
 
-        displayDesigns(filteredDesigns);
-    }
+//         displayDesigns(filteredDesigns);
+//     }
 
-    function displayDesigns(designs) {
-        const contentDiv = document.getElementById('content');
-        contentDiv.innerHTML = designs.map(design => `
-            <div class="design">
-                <h2>${design.title}</h2>
-                <p>by ${design.designer}</p>
-            </div>
-        `).join('');
-    }
-});
+//     function displayDesigns(designs) {
+//         const contentDiv = document.getElementById('content');
+//         contentDiv.innerHTML = designs.map(design => `
+//             <div class="design">
+//                 <h2>${design.title}</h2>
+//                 <p>by ${design.designer}</p>
+//             </div>
+//         `).join('');
+//     }
+// });
 // avani end 
