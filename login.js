@@ -150,4 +150,10 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Form submitted!");
         }
     });
+
+    // Google sign-in button logic
+    const googleSigninButton = document.querySelector('.google-signin');
+    googleSigninButton.addEventListener('click', () => {
+        window.location.href = 'https://accounts.google.com/signin'; // Google sign-in link
+    });
 });
