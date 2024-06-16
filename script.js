@@ -215,13 +215,12 @@ async function ngetData(){
     // Create and append the heading
     const heading = document.createElement('h2');
     heading.classList.add('footer-cta__heading', 'home-type-heading');
-    heading.textContent = 'Find your next designer today';
+    heading.innerHTML = 'Find your next<br><br>Designer Today ';
     contentDiv.appendChild(heading);
-    
-    // Create and append the copy div
+       // Create and append the copy div
     const copyDiv1 = document.createElement('div');
     copyDiv1.classList.add('footer-cta__copy');
-    copyDiv1.textContent = 'The world’s leading brands use Dribbble to hire creative talent. Browse millions of top-rated portfolios to find your perfect creative match.';
+    copyDiv1.innerHTML = '<br>The world’s leading brands use Dribbble to hire creative talent.<br>Browse millions of top-rated portfolios to find your perfect <br>creative match.<br>';
     contentDiv.appendChild(copyDiv1);
     
     // Create and append the actions div
@@ -229,18 +228,18 @@ async function ngetData(){
     actionsDiv.classList.add('footer-cta__actions');
     
     // Create and append the first button
-    const getStartedButton = document.createElement('a');
-    getStartedButton.classList.add('btn1', 'btn1--large');
-    getStartedButton.setAttribute('data-track-cta', 'Get started');
-    getStartedButton.setAttribute('href', '/signup/new?return_to_after_signup=%2Fget-started%3Fintention%3Dhire%23hiringWorkType');
-    getStartedButton.textContent = 'Get started now';
-    actionsDiv.appendChild(getStartedButton);
+    const getStartedNowButton = document.createElement('a');
+    getStartedNowButton.classList.add('btn1', 'btn1--large');
+    getStartedNowButton.setAttribute('data-track-cta', 'Get started');
+    getStartedNowButton.setAttribute('href', 'singup.html');
+    getStartedNowButton.textContent = 'Get started now';
+    actionsDiv.appendChild(getStartedNowButton);
     
     // Create and append the second button
     const learnMoreButton = document.createElement('a');
     learnMoreButton.classList.add('btn2', 'btn2--secondary-alt', 'btn2--large');
     learnMoreButton.setAttribute('data-track-cta', 'Learn about hiring');
-    learnMoreButton.setAttribute('href', '/hiring');
+    learnMoreButton.setAttribute('href', 'signup.html');
     learnMoreButton.textContent = 'Learn about hiring';
     actionsDiv.appendChild(learnMoreButton);
     
@@ -253,7 +252,7 @@ async function ngetData(){
     
     const joinDribbbleLink = document.createElement('a');
     joinDribbbleLink.setAttribute('data-track-cta', 'Join Dribbble');
-    joinDribbbleLink.setAttribute('href', '/signup/new');
+    joinDribbbleLink.setAttribute('href', 'signup.html');
     joinDribbbleLink.textContent = 'Join Dribbble';
     
     copyDiv2.appendChild(joinDribbbleLink);
