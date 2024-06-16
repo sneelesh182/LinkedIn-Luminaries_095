@@ -101,14 +101,65 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // buttons
-    document.getElementById('google-signup').addEventListener('click', function() {
-        alert('Sign up with Google clicked');
+
+
+      // Form submission handling
+    document.querySelector('form').addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        if (!name || !username || !email || !password) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+        try {
+            const response = await fetch('http://localhost:3000/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+
+            const result = await response.json();
+            if (response.status === 201) {
+                alert('User registered successfully');
+            } else {
+                alert(result.message);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        }
+    });
+
+    // Back button functionality (existing code)
+});
+
+
+
+
+     // buttons
+     document.getElementById('google-signup').addEventListener('click', function() {
+        window.location.href = 'https://accounts.google.com/';  // Link to Google accounts
     });
 
     document.getElementById('email-signup').addEventListener('click', function() {
-        alert('Continue with email clicked');
+        window.location.href = 'signup_usingmail.html';  // Link to continue with email page
     });
 
+    // Link "Sign In" text to login.html page
+    const signInText = document.querySelector('#signup-box a');
+    if (signInText) {
+        signInText.addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+    }
+
+
    
-});
+   

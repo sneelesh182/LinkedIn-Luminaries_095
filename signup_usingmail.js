@@ -157,6 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Back button functionality
     document.getElementById('back-button').addEventListener('click', function () {
-        window.history.back();
+        window.location.href = 'signup.html'; // Updated to link to signup.html
     });
 });
