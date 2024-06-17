@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const signupButton = document.getElementById('signup');
     const getStartedButton = document.getElementById('get-started');
     const searchInput = document.getElementById('search');
+    const findDesignersLink = document.getElementById('find-designers'); // Added for Find designers link
 
     loginButton.addEventListener('click', function() {
         window.location.href = 'login.html'; // to login page
@@ -13,9 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'signup.html'; // to signup page
     });
 
-
     getStartedButton.addEventListener('click', function() {
         window.location.href = 'signup.html'; // to signup page
+    });
+
+    findDesignersLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        window.location.href = 'hiring.html'; // Redirect to hiring.html
     });
 
     const navItems = document.querySelectorAll('nav ul li a');
@@ -31,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     searchInput.addEventListener('focus', function() {
         this.style.borderColor = '#000';
     });
+
     searchInput.addEventListener('blur', function() {
         this.style.borderColor = '#ccc';
     });
@@ -41,9 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function filterDesigns(query) {
-
-        // add data
-        
         const designs = [
             { title: 'Blue Ocean', designer: 'Alex Krugli', tags: ['blue', 'ocean', 'water'] },
             { title: 'Sunset', designer: 'Jane Doe', tags: ['orange', 'sunset', 'sky'] },
@@ -59,13 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function displayDesigns(designs) {
-        const contentDiv = document.getElementById('content');
-        contentDiv.innerHTML = designs.map(design => `
-            <div class="design">
-                <h2>${design.title}</h2>
-                <p>by ${design.designer}</p>
-            </div>
-        `).join('');
+        // Implement the logic to display the filtered designs
+        console.log('Filtered Designs:', designs);
     }
 });
 
