@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Post Job</title>
+    <link rel="stylesheet" href="postjob.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-    <!-- Avani Part Start-->
     <div id="navbar-container">
         <nav id="navbar">
             <ul>
                 <li class="dropdown">
-                    <a href="#" id="find-designers">Find designers <i class="fa-solid fa-angle-down" style="color: #000000;"></i></i></a>
+                    <a href="#">Find designers <i class="fa-solid fa-angle-down" style="color: #000000;"></i></i></a>
                     <div class="dropdown-content">
                         <a href="#">Designer search</a>
                         <a href="#">Post a job</a>  
                     </div>
                 </li>
-                
                 <li><a href="#">Inspiration</a></li>
                 <li class="dropdown">
                     <a href="#">Courses <i class="fa-solid fa-angle-down" style="color: #000000;"></i></i></a>
@@ -46,56 +42,82 @@
             </div>
         </nav>
     </div>
+    <div class="header-container">
+        <h1>Post a job on Dribbble</h1>
+        <p>The #1 job board for hiring designers and creative professionals.</p>
+    </div>
 
-    <div id="content-container">
-        <div id="content">
-            <div class="badge">Over 3 million ready-to-work creatives!</div>
-            <h1>The world's destination <br>for design</h1>
-            <p>Get inspired by the work of millions of top-rated designers & agencies around the world.</p>
-            <button id="get-started">Get started</button>
+    <div id="anicontent">
+        
+        <div class="aniform-container">
+            <form>
+                <h2>Tell us about your role</h2>
+                <div class="aniform-group">
+                    <label for="job-title">Job title <span style="color: red;">*</span></label>
+                    <input type="text" id="job-title" placeholder="e.g. Senior Product Designer">
+                </div>
+                <div class="aniform-group">
+                    <label for="job-description">Add your job description <span style="color: red;">*</span></label>
+                    <textarea id="job-description" placeholder="e.g. We're looking for a full-time senior product designer with 6-8 years experience in product design and leadership. This position is located in New York City."></textarea>
+                </div>
+                <div class="aniform-group">
+                    <label for="job-location">Job location</label>
+                    <input type="text" id="job-location" placeholder="e.g. New York City or San Francisco">
+                </div>
+                <div class="aniform-group">
+                    <label for="workplace-type">Workplace type <span style="color: red;">*</span></label>
+                    <select id="workplace-type">
+                        <option value="">Select workplace type</option>
+                        <option value="remote">Remote</option>
+                        <option value="onsite">Onsite</option>
+                        <option value="hybrid">Hybrid</option>
+                    </select>
+                </div>
+                <div class="aniform-group">
+                    <label for="designer-type">What type of designer are you looking for? <span style="color: red;">*</span></label>
+                    <select id="designer-type">
+                        <option value="">Select designer type</option>
+                        <option value="graphic">Graphic Designer</option>
+                        <option value="uiux">UI/UX Designer</option>
+                        <option value="product">Product Designer</option>
+                    </select>
+                </div>
+                <div class="aniform-group">
+                    <label for="employment-type">Employment type <span style="color: red;">*</span></label>
+                    <select id="employment-type">
+                        <option value="">Select employment type</option>
+                        <option value="full-time">Full-time</option>
+                        <option value="part-time">Part-time</option>
+                        <option value="contract">Contract</option>
+                    </select>
+                </div>
+                <div class="aniform-group">
+                    <label for="application-link">Where can people apply? <span style="color: red;">*</span></label>
+                    <input type="text" id="application-link" placeholder="e.g. https://greenhouse.io/f73jfwh">
+                </div>
+                <!-- <h2>Company information</h2> -->
+                <div class="aniform-group">
+                    <label for="company-name">What's your company name? <span style="color: red;">*</span></label>
+                    <input type="text" id="company-name" placeholder="e.g. ABC Enterprises">
+                </div>
+                <div class="aniform-group">
+                    <label for="company-logo">Your company logo</label>
+                    <input type="file" id="company-logo">
+                    <p>Recommended dimensions: 144x144 px</p>
+                </div>
+                <div class="aniform-group">
+                    <label for="company-website">Your company website <span style="color: red;">*</span></label>
+                    <input type="text" id="company-website" placeholder="e.g. https://domain.com">
+                </div>
+                <div class="aniform-buttons">
+                    <button class="anicancel-button">Cancel</button>
+                    <button class="anisubmit-button">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 
-    
-
-<!-- Avani Part End -->
-
-
-
-<!-- Shasikant Part Start -->
-
-<!-- Shasikant Part End -->
-
-
-
-<!-- Neelesh Part Start -->
-<div id="ncontainer">
-    <div id="move"></div>
-</div>
-<h2 id="explore" style="text-align: center;">Explore inspiring designs</h2>
-<div id="ncontainer1"></div>
-<div id="btn_redirect">
-    <button id="browse">Browse more inspiration</button>
-</div>
-
-<!-- Neelesh Part End -->
-
-
-
-<!-- Ayush Part Start -->
-
-<div id="footer-cta-container">
-    
-</div>
-
- 
-
-
-<!-- Ayush Part End -->
-
-
-
-<!-- Kranti Part Start -->
+    <!-- Kranti Part Start -->
 
     <div class="slider">
         <div class="slide-track">
@@ -214,7 +236,8 @@
     </Footer>
 
 <!-- Kranti Part End -->
-</body>
-<script src="script.js"></script>
-</html>
 
+    <script src="script.js"></script>
+    <script src="postjob.js"></script>
+</body>
+</html>
