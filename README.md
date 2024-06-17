@@ -101,4 +101,8 @@ Push to the branch (git push origin feature-branch).
 
 Open a pull request.
 
+# Feedback
+Welcome to the Project! We value your feedback and suggestions. Please open an issue if you have any feedback, suggestions, or bug reports. We appreciate your input!
+
+Thank you for helping us improve the Project!
 
