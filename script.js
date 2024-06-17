@@ -231,7 +231,7 @@ async function ngetData(){
     const getStartedNowButton = document.createElement('a');
     getStartedNowButton.classList.add('btn1', 'btn1--large');
     getStartedNowButton.setAttribute('data-track-cta', 'Get started');
-    getStartedNowButton.setAttribute('href', 'singup.html');
+    getStartedNowButton.setAttribute('href', 'signup.html');
     getStartedNowButton.textContent = 'Get started now';
     actionsDiv.appendChild(getStartedNowButton);
     

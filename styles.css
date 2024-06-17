@@ -758,6 +758,12 @@ p {
 .btn2--secondary-alt:hover {
   background-color: #e0e0e0;
 }
+@media only screen and (max-width: 959px) {
+  html {
+      text-size-adjust: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
 
 /* Ayush Part End */
 
