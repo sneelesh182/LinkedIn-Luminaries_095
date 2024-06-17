@@ -58,9 +58,13 @@ Contributing
 Contributions are welcome! If you have any ideas, suggestions, or issues, please open an issue or a pull request.
 
 Fork the repository.
+
 Create a new branch (git checkout -b feature-branch).
+
 Commit your changes (git commit -m 'Add some feature').
+
 Push to the branch (git push origin feature-branch).
+
 Open a pull request.
 
 
