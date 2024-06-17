@@ -57,6 +57,14 @@ signup_usingmail.js
 
 support.html
 
+postjob.html
+
+postjob.css
+
+hiring.html
+
+hiring.js
+
 db.json
 
 styles.css
