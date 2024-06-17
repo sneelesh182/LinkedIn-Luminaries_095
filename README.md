@@ -65,6 +65,8 @@ hiring.html
 
 hiring.js
 
+server.js
+
 db.json
 
 styles.css
