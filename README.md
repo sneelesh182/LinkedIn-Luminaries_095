@@ -3,7 +3,11 @@ Dribbble Clone Project
 
 This project is a clone of Dribbble, built to showcase the implementation of a JSON server as a backend. The clone replicates key features of Dribbble, including user profiles, project showcases, and more.
 
-Table of Contents
+# Project Type
+
+Frontend
+
+# Table of Contents
 Installation
 Features
 Usage
@@ -29,7 +33,37 @@ json-server --watch db.json
 The application should now be running at http://localhost:3000 
 
 
-Features
+# Directory Structure
+
+index.html
+
+script.js
+
+browse.html
+
+browse.js
+
+login.html
+
+login.js
+
+signup.html
+
+signup.js
+
+signup_usingmail.html
+
+signup_usingmail.js
+
+support.html
+
+db.json
+
+styles.css
+
+readme.md
+
+# Features
 User Authentication: Sign up, login, and manage user profiles.
 Project Showcase: Upload and showcase projects, similar to Dribbble shots.
 Search and Filter: Search for projects and filter by categories or tags.
