@@ -237,7 +237,7 @@ async function ngetData(){
     const learnMoreButton = document.createElement('a');
     learnMoreButton.classList.add('btn2', 'btn2--secondary-alt', 'btn2--large');
     learnMoreButton.setAttribute('data-track-cta', 'Learn about hiring');
-    learnMoreButton.setAttribute('href', 'signup.html');
+    learnMoreButton.setAttribute('href', 'hiring.html');
     learnMoreButton.textContent = 'Learn about hiring';
     actionsDiv.appendChild(learnMoreButton);
     
