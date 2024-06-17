@@ -229,7 +229,7 @@ async function ngetData(){
     const getStartedNowButton = document.createElement('a');
     getStartedNowButton.classList.add('btn1', 'btn1--large');
     getStartedNowButton.setAttribute('data-track-cta', 'Get started');
-    getStartedNowButton.setAttribute('href', 'singup.html');
+    getStartedNowButton.setAttribute('href', 'signup.html');
     getStartedNowButton.textContent = 'Get started now';
     actionsDiv.appendChild(getStartedNowButton);
     
@@ -237,7 +237,7 @@ async function ngetData(){
     const learnMoreButton = document.createElement('a');
     learnMoreButton.classList.add('btn2', 'btn2--secondary-alt', 'btn2--large');
     learnMoreButton.setAttribute('data-track-cta', 'Learn about hiring');
-    learnMoreButton.setAttribute('href', 'signup.html');
+    learnMoreButton.setAttribute('href', 'hiring.html');
     learnMoreButton.textContent = 'Learn about hiring';
     actionsDiv.appendChild(learnMoreButton);
     
