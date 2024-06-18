@@ -2,7 +2,7 @@
   "name": "linkedin-luminaries_095",
   "version": "1.0.0",
   "description": "Dribbble Clone Project",
-  "main": "server.js",
+  "main": "browse.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"

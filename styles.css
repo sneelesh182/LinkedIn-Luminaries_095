@@ -38,10 +38,6 @@ body {
   margin-top: 20px;
 }
 
-#navbar-logo {
-  max-height: 60px; /* Adjust height as needed */
-  margin-right: 25px; /* Pushes the logo to the center */
-}
 nav ul {
   list-style: none;
   display: flex;
@@ -69,8 +65,6 @@ nav ul li a {
 
 .search-container {
   position: relative;
-  flex: 1; /* Ensures search bar takes remaining space */
-  
 }
 
 .search-container input {
