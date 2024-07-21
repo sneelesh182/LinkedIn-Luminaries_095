@@ -89,7 +89,7 @@ function handleBrowse(){
 }
 async function ngetData(){
     try{
-        let res=await fetch('http://localhost:3000/inspiring_designs')
+        let res=await fetch('https://my-json-server-cqdz.onrender.com/inspiring_designs')
         if(res.ok){
             let data=await res.json()
             nshowData(data)
@@ -151,7 +151,7 @@ async function ngetData(){
     ngetData()
     async function ngetData1(){
         try{
-            let res=await fetch(`http://localhost:3000/moving-cards`)
+            let res=await fetch(`https://my-json-server-cqdz.onrender.com/moving-cards`)
             if(res.ok){
                 let data=await res.json()
                 nshowData1(data)

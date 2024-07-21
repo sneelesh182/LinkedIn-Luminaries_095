@@ -4,7 +4,7 @@ let go=document.querySelector("#go")
 let data=[]
 async function ngetData2() {
     try {
-        let res = await fetch('http://localhost:3000/explore_designs');
+        let res = await fetch('https://my-json-server-cqdz.onrender.com/explore_designs');
         if (res.ok) {
              data = await res.json();
             return data;
